@@ -19,7 +19,7 @@ Windows (PowerShell):
 irm https://raw.githubusercontent.com/Kennra/cli/main/install.ps1 | iex
 ```
 
-With npm (Node 20 or newer):
+With npm (Node 22 or newer), once the package is published:
 
 ```sh
 npm i -g kennra
@@ -43,13 +43,15 @@ The binaries contain their own runtime, so you need neither Node nor anything el
 
 ## Sign in
 
+Create a developer token in Kennra (Developers → Tokens), then pipe it in:
+
 ```sh
-kennra login
+pbpaste | kennra login --token-stdin
 kennra whoami
 ```
 
-`kennra login` opens the sign-in page of Kennra. `kennra whoami` shows the workspace and what your access
-allows. To work on a workspace's structure you need schema rights; see the documentation.
+`kennra whoami` shows the workspace and what your access allows. To work on a workspace's structure you
+need schema rights; see the documentation. Signing in through the browser comes in a later version.
 
 ## Reporting problems
 
