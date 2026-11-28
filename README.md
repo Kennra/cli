@@ -19,10 +19,11 @@ Windows (PowerShell):
 irm https://raw.githubusercontent.com/Kennra/cli/main/install.ps1 | iex
 ```
 
-With npm (Node 22 or newer), once the package is published:
+With [Bun](https://bun.sh), or npm on Node 22 or newer:
 
 ```sh
-npm i -g kennra
+bun add -g kennra      # or: npm i -g kennra
+bunx kennra --help     # run it once without installing (or: npx kennra --help)
 ```
 
 Or download the binary for your system from the [latest release](https://github.com/Kennra/cli/releases/latest)
